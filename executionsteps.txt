@@ -1,0 +1,13 @@
+export PATH=$PATH:/Applications/CMake.app/Contents/bin
+export PATH=$PATH:/Users/Island/Desktop/Development/android-ndk-r10c-darwin-x86_64/android-ndk-r10c
+export PATH=$PATH:/Users/Island/Desktop/Development/android-ndk-r10c-darwin-x86_64/android-ndk-r10c/toolchains/arm-linux-androideabi-4.9/prebuilt/darwin-x86_64/bin
+export ANDROID_NDK=/Users/Island/Desktop/Development/android-ndk-r10c-darwin-x86_64/android-ndk-r10c
+
+1)copy android_config.cmake from android folder to root folder
+2)mkdir build && cd build
+3)cmake -DCMAKE_TOOLCHAIN_FILE=../android_config.cmake ..
+4)/Applications/Xcode.app/Contents/Developer/usr/bin/make
+5)update .so.10 on link file in side modules/CMakeFiles/NE10_shared.dir
+6)change dir to modules/
+7)copy and past contents of link.txt and execute to create .so file
+build:
